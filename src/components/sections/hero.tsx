@@ -56,7 +56,7 @@ const HeroSection = () => {
                       </h1>
                     </TooltipTrigger>
                     <TooltipContent side="top">
-                      There's something waiting for you in devtools
+                      There&apos;s something waiting for you in devtools
                     </TooltipContent>
                   </Tooltip>
                 </BlurIn>
@@ -105,7 +105,7 @@ const HeroSection = () => {
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent side="bottom">
-                      <p>Please, don't leave me hanging 😢</p>
+                      <p>Please, don&apos;t leave me hanging 😢</p>
                     </TooltipContent>
                   </Tooltip>
 

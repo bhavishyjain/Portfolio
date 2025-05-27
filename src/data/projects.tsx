@@ -309,7 +309,7 @@ const projects: Project[] = [
     id: "weatherapp",
     category: "Web Development",
     title: "Weather App",
-    src: "/assets/projects-screenshots/weatherapp/1.png", // update the path if needed
+    src: "/assets/projects-screenshots/weatherapp/1.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://bhavishyjain.github.io/weather-app/",
     github: "https://github.com/bhavishyjain/weather-app",
@@ -339,7 +339,7 @@ const projects: Project[] = [
     id: "foodweb",
     category: "Web Development",
     title: "Food Web",
-    src: "/assets/projects-screenshots/foodweb/1.png", // update the path if needed
+    src: "/assets/projects-screenshots/foodweb/1.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://bhavishyjain.github.io/food-web/",
     github: "https://github.com/bhavishyjain/food-web",
@@ -359,6 +359,8 @@ const projects: Project[] = [
             `${BASE_PATH}/foodweb/1.png`,
             `${BASE_PATH}/foodweb/2.png`,
             `${BASE_PATH}/foodweb/3.png`,
+            `${BASE_PATH}/foodweb/4.png`,
+            `${BASE_PATH}/foodweb/5.png`,
           ]} />
         </div>
       );
@@ -369,10 +371,10 @@ const projects: Project[] = [
     id: "personalportfolio",
     category: "Portfolio",
     title: "My Personal Portfolio",
-    src: "/assets/projects-screenshots/personalportfolio/1.png", // update the path if needed
+    src: "/assets/projects-screenshots/personalportfolio/1.png",
     screenshots: ["landing.png", "about.png", "projects.png"],
-    live: "https://your-portfolio-live-link.com", // replace with your live portfolio link when deployed
-    github: "https://github.com/your-github-username/your-portfolio-repo", // replace with your repo link
+    live: "https://bhavishyjain.vercel.app/",
+    github: "https://github.com/bhavishyjain/Portfolio",
     skills: {
       frontend: [PROJECT_SKILLS.ts, PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
       backend: [],

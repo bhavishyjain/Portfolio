@@ -23,10 +23,12 @@ import {
   SiSocketdotio,
   SiSupabase,
   SiTailwindcss,
+  SiRedux,
   SiThreedotjs,
   SiTypescript,
   SiVuedotjs,
   SiVite,
+  SiMui,
   SiNetlify,
   SiHtml5,
   SiCss3,
@@ -39,37 +41,6 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import css from "styled-jsx/css";
 const BASE_PATH = "/assets/projects-screenshots";
 
-const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
-  return (
-    <div className="flex flex-col md:flex-row items-center justify-start gap-3 my-3 mb-8">
-      <Link
-        className="font-mono underline flex gap-2"
-        rel="noopener"
-        target="_new"
-        href={live}
-      >
-        <Button variant={"default"} size={"sm"}>
-          Visit Website
-          <ArrowUpRight className="ml-3 w-5 h-5" />
-        </Button>
-      </Link>
-      {repo && (
-        <Link
-          className="font-mono underline flex gap-2"
-          rel="noopener"
-          target="_new"
-          href={repo}
-        >
-          <Button variant={"default"} size={"sm"}>
-            Github
-            <ArrowUpRight className="ml-3 w-5 h-5" />
-          </Button>
-        </Link>
-      )}
-    </div>
-  );
-};
-
 export type Skill = {
   title: string;
   bg: string;
@@ -77,6 +48,48 @@ export type Skill = {
   icon: ReactNode;
 };
 const PROJECT_SKILLS = {
+  apexcharts: {
+    title: "ApexCharts",
+    bg: "black",
+    fg: "white",
+    icon: (
+      <>
+        {/* Light theme version (black icon) */}
+        <img
+          src="https://apexcharts.com/media/apexcharts-logo.png"
+          alt="ApexCharts"
+          className="h-6 w-6 block dark:hidden"
+          style={{
+            filter: "brightness(0) saturate(100%)",
+          }}
+        />
+        {/* Dark theme version (white icon) */}
+        <img
+          src="https://apexcharts.com/media/apexcharts-logo.png"
+          alt="ApexCharts"
+          className="h-6 w-6 hidden dark:block"
+          style={{
+            filter:
+              "brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg)",
+          }}
+        />
+      </>
+    ),
+  },
+
+  mui: {
+    title: "MUI",
+    bg: "black",
+    fg: "white",
+    icon: <SiMui />,
+  },
+
+  redux: {
+    title: "Redux",
+    bg: "black",
+    fg: "white",
+    icon: <SiRedux />,
+  },
   next: {
     title: "Next.js",
     bg: "black",
@@ -305,14 +318,42 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
-  { // 01. Weather App Project
+  { // 01. Whatsify Partner Dashboard
+    id: "whatsifypartnerdashboard",
+    category: "Dashboard",
+    title: "Whatsify Partner Dashboard",
+    src: "/assets/projects-screenshots/whatsifypartnerdashboard/1.png",
+    screenshots: ["landing.png", "referrals.png", "payouts.png"],
+    live: "https://partner.whatsify.me/",
+    skills: {
+      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.mui, PROJECT_SKILLS.redux, PROJECT_SKILLS.apexcharts],
+      backend: [],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            A responsive affiliate dashboard built with React, Tailwind CSS, MUI, and Redux. Includes RazorpayX payout integration, referral tracking, and earnings visualization using ApexCharts.
+          </TypographyP>
+          <SlideShow images={[
+            `${BASE_PATH}/whatsifypartnerdashboard/1.png`,
+            `${BASE_PATH}/whatsifypartnerdashboard/2.png`,
+            `${BASE_PATH}/whatsifypartnerdashboard/3.png`,
+            `${BASE_PATH}/whatsifypartnerdashboard/5.png`,
+            `${BASE_PATH}/whatsifypartnerdashboard/4.png`,
+          ]} />
+        </div>
+      );
+    },
+  },
+
+  { // 02. Weather App Project
     id: "weatherapp",
     category: "Web Development",
     title: "Weather App",
     src: "/assets/projects-screenshots/weatherapp/1.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://bhavishyjain.github.io/weather-app/",
-    github: "https://github.com/bhavishyjain/weather-app",
     skills: {
       frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
       backend: [],
@@ -324,7 +365,6 @@ const projects: Project[] = [
             A clean and functional weather app that fetches real-time weather information using an open API.
             Displays temperature, humidity, and other essential data with a user-friendly interface.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[
             `${BASE_PATH}/weatherapp/1.png`,
             `${BASE_PATH}/weatherapp/2.png`,
@@ -335,14 +375,13 @@ const projects: Project[] = [
     },
   },
 
-  { // 02. Food Web Project
+  { // 03. Food Web Project
     id: "foodweb",
     category: "Web Development",
     title: "Food Web",
     src: "/assets/projects-screenshots/foodweb/1.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://bhavishyjain.github.io/food-web/",
-    github: "https://github.com/bhavishyjain/food-web",
     skills: {
       frontend: [PROJECT_SKILLS.html, PROJECT_SKILLS.css, PROJECT_SKILLS.js],
       backend: [],
@@ -354,27 +393,24 @@ const projects: Project[] = [
             An engaging food ordering website where users can browse dishes, view categories, and place mock orders.
             Designed with smooth UI elements and responsive layouts for a delightful experience.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[
             `${BASE_PATH}/foodweb/1.png`,
             `${BASE_PATH}/foodweb/2.png`,
             `${BASE_PATH}/foodweb/3.png`,
             `${BASE_PATH}/foodweb/4.png`,
-            `${BASE_PATH}/foodweb/5.png`,
           ]} />
         </div>
       );
     },
   },
 
-  { // 03. Personal Portfolio Project
+  { // 04. Personal Portfolio Project
     id: "personalportfolio",
     category: "Portfolio",
     title: "My Personal Portfolio",
     src: "/assets/projects-screenshots/personalportfolio/1.png",
     screenshots: ["landing.png", "about.png", "projects.png"],
     live: "https://bhavishyjain.vercel.app/",
-    github: "https://github.com/bhavishyjain/Portfolio",
     skills: {
       frontend: [PROJECT_SKILLS.ts, PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
       backend: [],
@@ -386,7 +422,6 @@ const projects: Project[] = [
             Welcome to my personal portfolio! Showcasing my latest projects, skills, and experiences.
             Built with modern frontend technologies and a clean, minimal design to provide a smooth browsing experience.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow images={[
             `${BASE_PATH}/personalportfolio/1.png`,
             `${BASE_PATH}/personalportfolio/2.png`,

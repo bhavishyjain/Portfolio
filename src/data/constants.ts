@@ -7,7 +7,7 @@ export enum SkillNames {
   GITHUB = "github",
   GIT = "git",
   TYPESCRIPT = "ts",
-  LINUX = "linux",
+  CLOUDFLARE = "cloudflare",
   VERCEL = "vercel",
   CANVA = "canva",
   PRETTIER = "prettier",
@@ -15,7 +15,7 @@ export enum SkillNames {
   CSS = "css",
   NPM = "npm",
   JS = "js",
-  MYSQL = "sql",
+  MONGODB = "mongodb",
   BOOTSTRAP = "bootstrap",
 }
 
@@ -33,7 +33,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 1,
     name: "react",
     label: "React",
-    shortDescription: "React: The magic wand that makes your UI *so* interactive! ⚡✨",
+    shortDescription:
+      "React: The magic wand that makes your UI *so* interactive! ⚡✨",
     color: "#61dafb",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
@@ -41,7 +42,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 2,
     name: "nextjs",
     label: "Next.js",
-    shortDescription: "Next.js: The drama queen of frameworks, serving SSR like no one else 👑📜",
+    shortDescription:
+      "Next.js: The drama queen of frameworks, serving SSR like no one else 👑📜",
     color: "#ffffff",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
@@ -49,7 +51,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 3,
     name: "tailwind",
     label: "Tailwind",
-    shortDescription: "Tailwind: Utility-first classes that’ll style your code like a *boss* 🌪️🔥",
+    shortDescription:
+      "Tailwind: Utility-first classes that’ll style your code like a *boss* 🌪️🔥",
     color: "#38bdf8",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   },
@@ -57,7 +60,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 4,
     name: "nodejs",
     label: "Node.js",
-    shortDescription: "Node.js: Where JavaScript goes rogue and runs your backend like a champ 🔙🔛",
+    shortDescription:
+      "Node.js: Where JavaScript goes rogue and runs your backend like a champ 🔙🔛",
     color: "#6cc24a",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
@@ -65,7 +69,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 5,
     name: "express",
     label: "Express",
-    shortDescription: "Express: The lightning-fast Node.js framework that says 'Let’s get this bread' 🏃‍♂️💨",
+    shortDescription:
+      "Express: The lightning-fast Node.js framework that says 'Let’s get this bread' 🏃‍♂️💨",
     color: "#ffffff",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
@@ -73,7 +78,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 6,
     name: "github",
     label: "GitHub",
-       shortDescription: "GitHub: Where code meets magic (aka pull requests). 🐙✨",
+    shortDescription:
+      "GitHub: Where code meets magic (aka pull requests). 🐙✨",
     color: "#000000",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
@@ -81,7 +87,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 7,
     name: "git",
     label: "Git",
-    shortDescription: "Git: The personal bodyguard of your code. Keeps it safe, organized, and drama-free 🕵️‍♂️🔄",
+    shortDescription:
+      "Git: The personal bodyguard of your code. Keeps it safe, organized, and drama-free 🕵️‍♂️🔄",
     color: "#f1502f",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
@@ -89,23 +96,26 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 8,
     name: "ts",
     label: "TypeScript",
-    shortDescription: "TypeScript: JavaScript, but with a PhD in safety. Ain’t no errors on my watch! 💯🔒",
+    shortDescription:
+      "TypeScript: JavaScript, but with a PhD in safety. Ain’t no errors on my watch! 💯🔒",
     color: "#007acc",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
-   [SkillNames.LINUX]: {
+  [SkillNames.CLOUDFLARE]: {
     id: 9,
-    name: "linux",
-    label: "Linux",
-    shortDescription: "Linux: The beast of computing. Welcome to the command line jungle 🐧💻",
-    color: "#ffffff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    name: "cloudflare",
+    label: "Cloudflare",
+    shortDescription:
+      "Cloudflare: Speed, security, and reliability for your web presence ☁️🔒⚡",
+    color: "#F38020",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
   },
   [SkillNames.VERCEL]: {
     id: 10,
     name: "vercel",
     label: "Vercel",
-    shortDescription: "Vercel: Where you deploy, and suddenly everything is *smooth* like butter 🧈🚀",
+    shortDescription:
+      "Vercel: Where you deploy, and suddenly everything is *smooth* like butter 🧈🚀",
     color: "#000000",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
   },
@@ -113,7 +123,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 11,
     name: "canva",
     label: "Canva",
-    shortDescription: "Canva: Design like a pro, even if you’re *definitely* not one 🎨✨",
+    shortDescription:
+      "Canva: Design like a pro, even if you’re *definitely* not one 🎨✨",
     color: "#00c4cc",
     icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
   },
@@ -121,7 +132,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 12,
     name: "prettier",
     label: "Prettier",
-    shortDescription: "Prettier: Making your code look like a work of art. 🎨🔥",
+    shortDescription:
+      "Prettier: Making your code look like a work of art. 🎨🔥",
     color: "#f7b93e",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg",
   },
@@ -129,7 +141,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 13,
     name: "html",
     label: "HTML",
-    shortDescription: "HTML: The foundation of the web. It’s like the walls of your house, but cooler 🏠✨",
+    shortDescription:
+      "HTML: The foundation of the web. It’s like the walls of your house, but cooler 🏠✨",
     color: "#e34c26",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },
@@ -137,7 +150,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 14,
     name: "css",
     label: "CSS",
-    shortDescription: "CSS: The flair, the style, the sass. Making the web pretty since forever 👗🎨",
+    shortDescription:
+      "CSS: The flair, the style, the sass. Making the web pretty since forever 👗🎨",
     color: "#264de4",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   },
@@ -145,7 +159,8 @@ export const SKILLS: Record<SkillNames, Skill> = {
     id: 15,
     name: "npm",
     label: "NPM",
-    shortDescription: "NPM: The plug for all your dependencies. Plugging in like a boss 🔌📦",
+    shortDescription:
+      "NPM: The plug for all your dependencies. Plugging in like a boss 🔌📦",
     color: "#cb3837",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
   },
@@ -157,13 +172,14 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#f7df1e",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
-  [SkillNames.MYSQL]: {
+  [SkillNames.MONGODB]: {
     id: 17,
-    name: "sql",
-    label: "SQL",
-    shortDescription: "SQL: The language that talks to your database. 'SELECT * FROM life' 😎💾",
-    color: "#00758f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    name: "mongodb",
+    label: "MongoDB",
+    shortDescription:
+      "MongoDB: The NoSQL powerhouse for flexible and scalable data 🚀🍃",
+    color: "#47A248",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   [SkillNames.BOOTSTRAP]: {
     id: 18,
@@ -174,7 +190,6 @@ export const SKILLS: Record<SkillNames, Skill> = {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
   },
 };
-
 
 export const themeDisclaimers = {
   light: [

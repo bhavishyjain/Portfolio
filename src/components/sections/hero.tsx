@@ -4,7 +4,11 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { File } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { usePreloader } from "../preloader";
 import { BlurIn, BoxReveal } from "../reveal-animations";
 import ScrollDownIcon from "../scroll-down-icon";
@@ -78,7 +82,7 @@ const HeroSection = () => {
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/1mci0FjavqH6XRu6LHQ0KcvvkpPi6RnhS/view?usp=sharing"
+                    "https://drive.google.com/file/d/1OiP1inOlDHX3qXherPzrY7E5IcVzGZQN/view?usp=drive_link"
                   }
                   target="_blank"
                   className="flex-1"

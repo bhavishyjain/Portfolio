@@ -24,7 +24,7 @@ const ProjectsSection = () => {
           className={cn(
             "bg-clip-text text-4xl text-center text-transparent md:text-7xl pt-16",
             "bg-gradient-to-b from-black/80 to-black/50",
-            "dark:bg-gradient-to-b dark:from-white/80 dark:to-white/20 dark:bg-opacity-50 mb-32"
+            "dark:bg-gradient-to-b dark:from-white/80 dark:to-white/20 dark:bg-opacity-50 mb-32",
           )}
         >
           Projects
@@ -55,16 +55,18 @@ const Modall = ({ project }: { project: Project }) => {
           >
             {/* Image of the project */}
             <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
+              className="absolute w-full h-full top-0 left-0 object-cover hover:scale-[1.05] transition-all"
               src={project.src}
               alt={project.title}
-              width={300}
-              height={300}
+              width={400}
+              height={267}
             />
             {/* Gradient overlay with title and category */}
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">
-                <div className="text-lg text-left text-white">{project.title}</div>
+                <div className="text-lg text-left text-white">
+                  {project.title}
+                </div>
                 <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
                   {project.category}
                 </div>

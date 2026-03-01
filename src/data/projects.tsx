@@ -2,7 +2,13 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import {
+  ArrowDownUpIcon,
+  ArrowUpRight,
+  ExternalLink,
+  Link2,
+  MoveUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -214,6 +220,18 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <RiReactjsFill />,
   },
+  reactnative: {
+    title: "React Native",
+    bg: "black",
+    fg: "white",
+    icon: <RiReactjsFill />,
+  },
+  i18n: {
+    title: "i18n",
+    bg: "black",
+    fg: "white",
+    icon: <span className="font-bold text-xs">i18n</span>,
+  },
   sanity: {
     title: "Sanity",
     bg: "black",
@@ -312,13 +330,97 @@ export type Project = {
   title: string;
   src: string;
   screenshots: string[];
+  orientation?: "landscape" | "portrait";
   skills: { frontend: Skill[]; backend: Skill[] };
   content: React.ReactNode | any;
   github?: string;
   live: string;
 };
 const projects: Project[] = [
-  { // 01. Whatsify Partner Dashboard
+  {
+    // 01. Delivery KPG Driver App
+    id: "deliverykpgdriver",
+    category: "Mobile App Development",
+    title: "Delivery KPG Driver App",
+    src: "/assets/projects-screenshots/deliverykpgdriver/2.jpeg",
+    screenshots: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
+    live: "https://play.google.com/store/apps/details?id=com.deliverykpg.driver&hl=en_IN",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.reactnative,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.i18n,
+      ],
+      backend: [PROJECT_SKILLS.sockerio],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            A comprehensive mobile app for delivery drivers featuring real-time
+            order tracking, route optimization, and GPS navigation. Available on
+            Google Play Store with driver authentication, earnings dashboard,
+            and seamless customer communication.
+          </TypographyP>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/deliverykpgdriver/1.jpeg`,
+              `${BASE_PATH}/deliverykpgdriver/2.jpeg`,
+              `${BASE_PATH}/deliverykpgdriver/3.jpeg`,
+              `${BASE_PATH}/deliverykpgdriver/4.jpeg`,
+            ]}
+            orientation="portrait"
+          />
+        </div>
+      );
+    },
+  },
+
+  {
+    // 02. Delivery KPG Resto App
+    id: "deliverykpgresto",
+    category: "Mobile App Development",
+    title: "Delivery KPG Resto App",
+    src: "/assets/projects-screenshots/deliverykpgresto/1.jpeg",
+    screenshots: ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg"],
+    orientation: "portrait",
+    live: "https://play.google.com/store/apps/details?id=com.deliverykpg.resto&hl=en_IN",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.reactnative,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.i18n,
+      ],
+      backend: [PROJECT_SKILLS.sockerio],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            A comprehensive restaurant management mobile app for business owners
+            to manage orders, inventory, and delivery operations. Available on
+            Google Play Store with real-time notifications, sales analytics,
+            menu management, and seamless integration with the driver app.
+          </TypographyP>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/deliverykpgresto/1.jpeg`,
+              `${BASE_PATH}/deliverykpgresto/2.jpeg`,
+              `${BASE_PATH}/deliverykpgresto/3.jpeg`,
+              `${BASE_PATH}/deliverykpgresto/4.jpeg`,
+              `${BASE_PATH}/deliverykpgresto/5.jpeg`,
+            ]}
+            orientation="portrait"
+          />
+        </div>
+      );
+    },
+  },
+
+  {
+    // 03. Whatsify Partner Dashboard
     id: "whatsifypartnerdashboard",
     category: "Dashboard",
     title: "Whatsify Partner Dashboard",
@@ -326,28 +428,39 @@ const projects: Project[] = [
     screenshots: ["landing.png", "referrals.png", "payouts.png"],
     live: "https://partner.whatsify.me/",
     skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.mui, PROJECT_SKILLS.redux, PROJECT_SKILLS.apexcharts],
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.mui,
+        PROJECT_SKILLS.redux,
+        PROJECT_SKILLS.apexcharts,
+      ],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono">
-            A responsive affiliate dashboard built with React, Tailwind CSS, MUI, and Redux. Includes RazorpayX payout integration, referral tracking, and earnings visualization using ApexCharts.
+            A responsive affiliate dashboard built with React, Tailwind CSS,
+            MUI, and Redux. Includes RazorpayX payout integration, referral
+            tracking, and earnings visualization using ApexCharts.
           </TypographyP>
-          <SlideShow images={[
-            `${BASE_PATH}/whatsifypartnerdashboard/1.png`,
-            `${BASE_PATH}/whatsifypartnerdashboard/2.png`,
-            `${BASE_PATH}/whatsifypartnerdashboard/3.png`,
-            `${BASE_PATH}/whatsifypartnerdashboard/5.png`,
-            `${BASE_PATH}/whatsifypartnerdashboard/4.png`,
-          ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/whatsifypartnerdashboard/1.png`,
+              `${BASE_PATH}/whatsifypartnerdashboard/2.png`,
+              `${BASE_PATH}/whatsifypartnerdashboard/3.png`,
+              `${BASE_PATH}/whatsifypartnerdashboard/5.png`,
+              `${BASE_PATH}/whatsifypartnerdashboard/4.png`,
+            ]}
+          />
         </div>
       );
     },
   },
 
-  { // 02. Weather App Project
+  {
+    // 04. Weather App Project
     id: "weatherapp",
     category: "Web Development",
     title: "Weather App",
@@ -362,20 +475,24 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            A clean and functional weather app that fetches real-time weather information using an open API.
-            Displays temperature, humidity, and other essential data with a user-friendly interface.
+            A clean and functional weather app that fetches real-time weather
+            information using an open API. Displays temperature, humidity, and
+            other essential data with a user-friendly interface.
           </TypographyP>
-          <SlideShow images={[
-            `${BASE_PATH}/weatherapp/1.png`,
-            `${BASE_PATH}/weatherapp/2.png`,
-            `${BASE_PATH}/weatherapp/3.png`,
-          ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/weatherapp/1.png`,
+              `${BASE_PATH}/weatherapp/2.png`,
+              `${BASE_PATH}/weatherapp/3.png`,
+            ]}
+          />
         </div>
       );
     },
   },
 
-  { // 03. Food Web Project
+  {
+    // 05. Food Web Project
     id: "foodweb",
     category: "Web Development",
     title: "Food Web",
@@ -390,21 +507,25 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            An engaging food ordering website where users can browse dishes, view categories, and place mock orders.
-            Designed with smooth UI elements and responsive layouts for a delightful experience.
+            An engaging food ordering website where users can browse dishes,
+            view categories, and place mock orders. Designed with smooth UI
+            elements and responsive layouts for a delightful experience.
           </TypographyP>
-          <SlideShow images={[
-            `${BASE_PATH}/foodweb/1.png`,
-            `${BASE_PATH}/foodweb/2.png`,
-            `${BASE_PATH}/foodweb/3.png`,
-            `${BASE_PATH}/foodweb/4.png`,
-          ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/foodweb/1.png`,
+              `${BASE_PATH}/foodweb/2.png`,
+              `${BASE_PATH}/foodweb/3.png`,
+              `${BASE_PATH}/foodweb/4.png`,
+            ]}
+          />
         </div>
       );
     },
   },
 
-  { // 04. Personal Portfolio Project
+  {
+    // 06. Personal Portfolio Project
     id: "personalportfolio",
     category: "Portfolio",
     title: "My Personal Portfolio",
@@ -412,22 +533,30 @@ const projects: Project[] = [
     screenshots: ["landing.png", "about.png", "projects.png"],
     live: "https://bhavishyjain.vercel.app/",
     skills: {
-      frontend: [PROJECT_SKILLS.ts, PROJECT_SKILLS.react, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.framerMotion],
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.framerMotion,
+      ],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Welcome to my personal portfolio! Showcasing my latest projects, skills, and experiences.
-            Built with modern frontend technologies and a clean, minimal design to provide a smooth browsing experience.
+            Welcome to my personal portfolio! Showcasing my latest projects,
+            skills, and experiences. Built with modern frontend technologies and
+            a clean, minimal design to provide a smooth browsing experience.
           </TypographyP>
-          <SlideShow images={[
-            `${BASE_PATH}/personalportfolio/1.png`,
-            `${BASE_PATH}/personalportfolio/2.png`,
-            `${BASE_PATH}/personalportfolio/3.png`,
-            `${BASE_PATH}/personalportfolio/4.png`,
-          ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/personalportfolio/1.png`,
+              `${BASE_PATH}/personalportfolio/2.png`,
+              `${BASE_PATH}/personalportfolio/3.png`,
+              `${BASE_PATH}/personalportfolio/4.png`,
+            ]}
+          />
         </div>
       );
     },

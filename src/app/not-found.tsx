@@ -1,4 +1,3 @@
-import NyanCat from "@/components/nyan-cat";
 import { cn } from "@/lib/utils";
 import Spline from "@splinetool/react-spline";
 import { Application } from "@splinetool/runtime";

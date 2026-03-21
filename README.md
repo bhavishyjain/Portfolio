@@ -142,7 +142,7 @@ _Full-Stack Developer & Creative Technologist_
 
 [![Email](https://img.shields.io/badge/Email-bhavishy2206@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bhavishy2206@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bhavishyjain/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF6B6B?style=for-the-badge&logo=safari&logoColor=white)](https://www.bhavishyjain.com/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF6B6B?style=for-the-badge&logo=safari&logoColor=white)](https://bhavishyjain.com/)
 
 ---
 
